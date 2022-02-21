@@ -1,11 +1,24 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-export default function App() {
+import Header from './components/Header';
+import BootstrapHeader from './components/BootstrapHeader';
+import { MenuItems } from './data/MenuItems';
+
+export function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <Router>
+      <BootstrapHeader />
+      {MenuItems.map((item) => {
+        return (
+          <Route
+            key={item.id}
+            path={item.path}
+            exact
+            component={item.component}
+          />
+        );
+      })}
+    </Router>
   );
 }
