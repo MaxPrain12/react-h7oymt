@@ -2,6 +2,7 @@ import Home from '../components/Home';
 import { PaginaListas } from '../components/PaginaListas';
 import Perfil from '../components/Perfil';
 import Juegos from '../components/Juegos';
+import JuegosApi from '../components/JuegosApi';
 
 export const MenuItems = [
   {
@@ -27,6 +28,12 @@ export const MenuItems = [
     path: '/Juegos',
     title: 'Juegos',
     component: Juegos,
+  },
+  {
+    id: 5,
+    path: '/JuegosApi',
+    title: 'JuegosApi',
+    component: JuegosApi,
   },
 ];
 
